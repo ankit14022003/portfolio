@@ -9,6 +9,7 @@ function App() {
       <Experience />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 }
@@ -16,15 +17,24 @@ function App() {
 // ================= HERO =================
 const Hero = () => (
   <section className="hero">
-    <h1>Ankit Chaudhary</h1>
+    <h1>
+      Hi, I'm <span>Ankit Chaudhary</span>
+    </h1>
+
     <h2>I simplify complex problems into scalable solutions</h2>
-    <p>Full Stack Developer | Java | React | SQL | Power BI | Python | JavaScript | C | C++</p>
+
+    <p>
+      Full Stack Developer | Java | React | SQL | Power BI | Python | JavaScript
+    </p>
 
     <div className="buttons">
-      <a href="https://drive.google.com/file/d/1ss-7E_f1CdSG7SWJd51AgHigz8a0MJD3/view?usp=drive_link" className="btn">Download Resume</a>
+      <a
+        href="https://drive.google.com/file/d/1ss-7E_f1CdSG7SWJd51AgHigz8a0MJD3/view?usp=drive_link" className="btn" target="_blank" rel="noreferrer">Download Resume</a>
+
       <a href="https://github.com/ankit14022003" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/ankit-chaudhary-bbbb06247?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
+
+      <a href="https://www.linkedin.com/in/ankit-chaudhary-bbbb06247" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
   </section>
 );
 
@@ -36,16 +46,16 @@ const Projects = () => (
     <div className="grid">
       <Card
         title="IPL Power BI Dashboard"
-        desc="Built an interactive IPL analytics dashboard using Power BI, improving data insights by 40% and enabling better decision-making."
+        desc="Interactive IPL analytics dashboard with strong data insights."
         tech="Power BI, SQL"
         github="https://ankit14022003.github.io/IPL-Analysis-Dashboard/"
       />
 
       <Card
-      title="Forggith Pharma Dashboard"
-      desc="Created a comprehensive business intelligence dashboard for Forggith Pharma to analyze sales, customer trends, and performance insights."
-      tech="Power BI, SQL, Data Analytics"
-      github="https://ankit14022003.github.io/Forggith-Pharmaceuticals-Dashboard/"
+        title="Forggith Pharma Dashboard"
+        desc="Business intelligence dashboard analyzing pharma sales & trends."
+        tech="Power BI, SQL"
+        github="https://ankit14022003.github.io/Forggith-Pharmaceuticals-Dashboard/"
       />
     </div>
   </section>
@@ -76,7 +86,7 @@ const Experience = () => (
 
       <div>
         <h3>Frontend Developer Intern</h3>
-        <p>Built responsive UI using React and improved user experience.</p>
+        <p>Built responsive UI using React and improved UX.</p>
       </div>
     </div>
   </section>
@@ -92,11 +102,10 @@ const Skills = () => (
       <Skill name="React" level="85%" />
       <Skill name="SQL" level="90%" />
       <Skill name="Power BI" level="85%" />
-      <Skill name="C / C++" level="75%" />
       <Skill name="JavaScript" level="90%" />
       <Skill name="Python" level="75%" />
-      <Skill name="DotNet" level="80%" />
       <Skill name="MongoDB" level="80%" />
+      <Skill name="PLSQL" level="90%" />
     </div>
   </section>
 );
@@ -111,22 +120,27 @@ const Skill = ({ name, level }) => (
 );
 
 // ================= CONTACT =================
-const Contact = () => {
-  return (
-    <section className="section">
-      <h2>Contact Me</h2>
+const Contact = () => (
+  <section className="section">
+    <h2>Contact Me</h2>
 
-      <form action="https://formspree.io/f/xaqlwkzr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
+    <form action="https://formspree.io/f/xaqlwkzr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
 
-        <input type="email" name="email" placeholder="Your Email" required />
+      <input type="email" name="email" placeholder="Your Email" required />
 
-        <textarea name="message" placeholder="Your Message" required></textarea>
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  );
-};
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+);
+
+// ================= FOOTER =================
+const Footer = () => (
+  <div className="footer">
+    <p>© 2026 Ankit Chaudhary</p>
+  </div>
+);
 
 export default App;
