@@ -79,6 +79,7 @@ const Skills = () => (
         "Tableau",
         "Excel",
         "AWS",
+        "Azure",
         "HTML / CSS",
       ].map((skill, i) => (
         <div key={i} className="skill">
@@ -211,7 +212,7 @@ const Contact = () => (
 // ===== FOOTER =====
 const Footer = () => (
   <div className="footer">
-    © 2026 Ankit Chaudhary
+    © 2026 Ankit Chaudhary. All rights reserved.
   </div>
 );
 

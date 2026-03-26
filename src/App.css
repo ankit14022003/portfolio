@@ -2,8 +2,11 @@
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: linear-gradient(135deg, #eef2f7, #e2e8f0);
-  color: #0f172a;
+
+  /* balanced dark gradient */
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+
+  color: #e2e8f0;
   line-height: 1.6;
 }
 
@@ -15,20 +18,22 @@ h1, h2, h3 {
 .section {
   padding: 80px 20px;
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 50px auto;
 
-  background: rgba(248, 250, 252, 0.55);
+  /* visible but not flashy */
+  background: rgba(30, 41, 59, 0.75);
+
   backdrop-filter: blur(10px);
 
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
 
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
   padding: 120px 20px;
   text-align: center;
   border-radius: 0 0 20px 20px;
@@ -38,17 +43,18 @@ h1, h2, h3 {
 .hero-content h1 {
   font-size: 2.8rem;
   font-weight: 700;
+  color: #f1f5f9;
 }
 
 .hero-content h2 {
   font-size: 1.3rem;
-  color: #475569;
+  color: #cbd5f5;
   font-weight: 500;
 }
 
 .hero-subtext {
   margin-top: 15px;
-  color: #64748b;
+  color: #94a3b8;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -63,15 +69,15 @@ h1, h2, h3 {
   margin: 8px;
   text-decoration: none;
   font-weight: 500;
-  color: #2563eb;
+  color: #cbd5f5;
 }
 
 .buttons a:hover {
-  text-decoration: underline;
+  color: #ffffff;
 }
 
 .btn.primary {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white !important;
   padding: 10px 20px;
   border-radius: 6px;
@@ -79,13 +85,13 @@ h1, h2, h3 {
 }
 
 .btn.primary:hover {
-  background: #1e40af;
+  transform: translateY(-2px);
 }
 
 /* ===== ABOUT ===== */
 .about-text {
   max-width: 800px;
-  color: #475569;
+  color: #cbd5f5;
 }
 
 /* ===== SKILLS ===== */
@@ -97,17 +103,18 @@ h1, h2, h3 {
 }
 
 .skill {
-  background: rgba(255,255,255,0.7);
-  border: 1px solid #e2e8f0;
+  background: rgba(51, 65, 85, 0.6);
+  border: 1px solid rgba(255,255,255,0.08);
   padding: 12px;
   border-radius: 8px;
   text-align: center;
   font-size: 0.9rem;
+  color: #e2e8f0;
   transition: 0.2s;
 }
 
 .skill:hover {
-  background: #e0ecff;
+  background: rgba(71, 85, 105, 0.7);
   transform: translateY(-3px);
 }
 
@@ -120,8 +127,8 @@ h1, h2, h3 {
 }
 
 .card {
-  background: rgba(248, 250, 252, 0.6);
-  border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(51, 65, 85, 0.6);
+  border: 1px solid rgba(255,255,255,0.08);
   padding: 20px;
   border-radius: 10px;
   transition: 0.25s ease;
@@ -129,17 +136,17 @@ h1, h2, h3 {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: rgba(71, 85, 105, 0.7);
 }
 
 .card p {
-  color: #475569;
+  color: #cbd5f5;
 }
 
 .tech {
   margin-top: 10px;
   font-size: 0.85rem;
-  color: #2563eb;
+  color: #60a5fa;
   font-weight: 500;
 }
 
@@ -149,9 +156,11 @@ h1, h2, h3 {
 }
 
 .card-links a {
+  display: inline-block;
   margin-right: 15px;
+  margin-bottom: 8px; /* FIX spacing */
   text-decoration: none;
-  color: #2563eb;
+  color: #60a5fa;
   font-weight: 500;
 }
 
@@ -169,7 +178,7 @@ h1, h2, h3 {
 }
 
 .company {
-  color: #475569;
+  color: #cbd5f5;
   font-weight: 500;
 }
 
@@ -193,13 +202,20 @@ h1, h2, h3 {
 
 .contact-info p {
   margin: 5px 0;
-  color: #475569;
+  color: #cbd5f5;
+}
+
+/* FIXED PROPERLY */
+.contact-links {
+  margin-top: 10px;
 }
 
 .contact-links a {
+  display: inline-block;
   margin-right: 15px;
+  margin-bottom: 10px;
   text-decoration: none;
-  color: #2563eb;
+  color: #60a5fa;
   font-weight: 500;
 }
 
@@ -219,9 +235,12 @@ form {
 input, textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 0.9rem;
+
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e2e8f0;
 }
 
 textarea {
@@ -237,7 +256,7 @@ input:focus, textarea:focus {
 button {
   width: fit-content;
   padding: 10px 20px;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: white;
   border: none;
   border-radius: 6px;
@@ -245,7 +264,7 @@ button {
 }
 
 button:hover {
-  background: #1e40af;
+  transform: translateY(-2px);
 }
 
 /* ===== FOOTER ===== */
@@ -253,7 +272,7 @@ button:hover {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #94a3b8;
 }
 
 /* ===== RESPONSIVE ===== */
