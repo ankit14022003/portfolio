@@ -80,7 +80,9 @@ const Skills = () => (
         "Excel",
         "AWS",
         "Azure",
-        "HTML / CSS",
+        "Docker",
+        "jQuery",
+        "Git",
       ].map((skill, i) => (
         <div key={i} className="skill">
           {skill}
